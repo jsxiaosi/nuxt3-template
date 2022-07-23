@@ -1,20 +1,5 @@
-<script lang="ts" setup></script>
-
 <template>
-  <div>
-    <!-- <NuxtWelcome /> -->
-    <NuxtLayout>
-      <NuxtPage />
-    </NuxtLayout>
-  </div>
+  <NuxtLayout name="default">
+    <NuxtPage />
+  </NuxtLayout>
 </template>
-
-<style lang="scss">
-  html,
-  body,
-  #__nuxt {
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-  }
-</style>

@@ -1,0 +1,24 @@
+@import './variable.scss';
+html,
+body,
+#__nuxt {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  transition: background-color 0.5s;
+  font-size: $font-size;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+.main {
+  width: 24rem;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: #{$padding};
+  color: var(--text-color);
+  margin: auto;
+}

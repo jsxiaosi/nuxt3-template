@@ -1,0 +1,27 @@
+<template>
+  <main class="main">
+    <slot />
+    <div class="layout">
+      <div class="config">
+        <Locales></Locales>
+        <SwitchTheme></SwitchTheme>
+      </div>
+      <div class="describe">[Default Layout]</div>
+    </div>
+  </main>
+</template>
+
+<style lang="scss">
+  .layout {
+    margin-top: $margin;
+    .config {
+      display: flex;
+      justify-content: space-between;
+    }
+    .describe {
+      margin-top: $margin2;
+      width: 100%;
+      text-align: center;
+    }
+  }
+</style>

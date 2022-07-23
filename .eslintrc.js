@@ -31,12 +31,7 @@ module.exports = {
     // 是否不允许向模板添加多个根节点
     'vue/no-multiple-template-root': 'off',
     // 是否要求组件名称始终为多字
-    'vue/multi-word-component-names': [
-      'error',
-      {
-        ignores: ['index', '404'],
-      },
-    ],
+    'vue/multi-word-component-names': 'off',
     'vue/component-tags-order': [
       'error',
       {

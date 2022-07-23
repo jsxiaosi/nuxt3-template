@@ -1,4 +1,6 @@
 <script setup lang="ts"></script>
 <template>
-  <div> admin</div>
+  <div>
+    <Starter></Starter>
+  </div>
 </template>
