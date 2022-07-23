@@ -4,7 +4,7 @@ import { defineNuxtConfig } from 'nuxt';
 export default defineNuxtConfig({
   // 更换源目录
   srcDir: 'src',
-  modules: ['@nuxtjs/color-mode'],
+  modules: ['@nuxtjs/color-mode', '@intlify/nuxt3'],
   // 添加全局样式
   css: ['@/assets/iconfont/iconfont.css', '@/assets/style/index.scss'],
   // TypeScript集成配置
@@ -17,6 +17,17 @@ export default defineNuxtConfig({
       },
     },
   },
+  // i18n 配置
+  intlify: {
+    localeDir: 'locales',
+    vueI18n: {
+      locale: 'zh-CH',
+      fallbackLocale: 'zh-CH',
+      availableLocales: ['en-US', 'zh-CH'],
+      sync: true,
+    },
+  },
+  // 主题切换配置
   colorMode: {
     classSuffix: '',
     fallback: 'light',

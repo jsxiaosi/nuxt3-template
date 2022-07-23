@@ -1,3 +1,6 @@
+<script lang="ts" setup>
+  const { t } = useLocales();
+</script>
 <template>
   <main class="main">
     <slot />
@@ -6,7 +9,7 @@
         <Locales></Locales>
         <SwitchTheme></SwitchTheme>
       </div>
-      <div class="describe">[Default Layout]</div>
+      <div class="describe">[{{ t('layout') }}]</div>
     </div>
   </main>
 </template>

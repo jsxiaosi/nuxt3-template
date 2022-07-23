@@ -1,24 +1,15 @@
 <script setup lang="ts">
   const color = useColorMode();
   function toggleDark() {
-    console.log(color);
     color.value = color.value === 'dark' ? 'light' : 'dark';
   }
 </script>
-
-<!-- <script>
-export default {
-  layout: "custom",
-}
-</script> -->
 
 <template>
   <div class="theme" :class="{ 'theme-dark': color.value === 'dark' }" @click="toggleDark">
     <div class="theme-inner" />
     <i class="iconfont icon-sun" />
     <i class="iconfont icon-moon" />
-    <!-- <SvgIcon name="sun" />
-          <SvgIcon name="moon" />-->
   </div>
 </template>
 

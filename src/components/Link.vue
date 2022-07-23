@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { LinkType } from '../types/Link';
+  import { LinkType } from '~/types/Link';
 
   defineProps({
     item: {
@@ -30,6 +30,6 @@
     }
   }
   .link:hover {
-    color: #646cff;
+    color: var(--color);
   }
 </style>
