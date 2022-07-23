@@ -1,6 +1,6 @@
 <script setup lang="ts"></script>
 <template>
   <div>
-    <Starter></Starter>
+    <Starter> </Starter>
   </div>
 </template>

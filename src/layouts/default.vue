@@ -9,7 +9,7 @@
         <Locales></Locales>
         <SwitchTheme></SwitchTheme>
       </div>
-      <div class="describe">[{{ t('layout') }}]</div>
+      <div class="describe">layout：{{ t('layout') }}</div>
     </div>
   </main>
 </template>

@@ -3,9 +3,7 @@
 
   const linkList = ref<LinkType[]>([
     { id: 1, title: 'Pinia Store', url: 'pinia' },
-    { id: 2, title: 'Pinia Store', url: 'pinia' },
-    { id: 3, title: 'Pinia Store', url: 'pinia' },
-    { id: 4, title: 'Pinia Store', url: 'pinia' },
+    { id: 2, title: 'Vue Use', url: 'pinia' },
   ]);
 </script>
 <template>
