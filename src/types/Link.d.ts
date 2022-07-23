@@ -1,5 +1,5 @@
 export interface LinkType {
   id: number;
   title: string;
-  url: any;
+  url: string;
 }

@@ -4,7 +4,7 @@ import { defineNuxtConfig } from 'nuxt';
 export default defineNuxtConfig({
   // 更换源目录
   srcDir: 'src',
-  modules: ['@nuxtjs/color-mode', '@intlify/nuxt3', '@pinia/nuxt'],
+  modules: ['@nuxtjs/color-mode', '@intlify/nuxt3', '@pinia/nuxt', '@vueuse/nuxt'],
   // 添加全局样式
   css: ['@/assets/iconfont/iconfont.css', '@/assets/style/index.scss'],
   // TypeScript集成配置
@@ -13,7 +13,7 @@ export default defineNuxtConfig({
     tsConfig: {
       compilerOptions: {
         strict: true,
-        types: [],
+        types: ['@pinia/nuxt', '@intlify/nuxt3'],
       },
     },
   },

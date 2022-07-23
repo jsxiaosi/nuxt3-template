@@ -1,4 +1,4 @@
-# Nuxt3 Template (Beta)
+# Nuxt3 Template
 
 ## 安装使用
 
