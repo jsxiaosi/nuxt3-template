@@ -8,7 +8,7 @@
     "preview": "nuxt preview",
     "lint:eslint": "eslint \"**/*.{vue,ts,js,tsx,jsx}\" --fix",
     "lint:prettier": "prettier --write --loglevel warn \"**/*.{js,json,css,scss,vue,ts,tsx,jsx,html,md}\"",
-    "lint:stylelint": "stylelint --syntax scss \"**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/",
+    "lint:stylelint": "stylelint --fix \"src/**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/",
     "lint:pretty": "pretty-quick --staged",
     "lint:staged": "lint-staged",
     "prepare": "husky install",
