@@ -7,5 +7,6 @@
 
 **/*.svg
 **/*.sh
+.npmrc
 
 /public/*
