@@ -1,5 +1,9 @@
 # Nuxt3 Template
 
+- 简洁开封即用
+- 内置常用工具，`VueUse`，`I18n`，`Pinia`
+- 合理的规范配置`ESlint`，`Prettier`，`CommitLint`
+
 ## 安装使用
 
 - 获取项目代码（https or ssh）
@@ -8,6 +12,12 @@
 git clone https://github.com/jsxiaosi/nuxt3-template.git
 
 git clone git@github.com:jsxiaosi/nuxt3-template.git
+```
+
+或者通过[`xs-cli`](https://github.com/jsxiaosi/xs-cli)快速创建
+
+```bash
+npx @jsxiaosi/xs-cli create [project-name]
 ```
 
 - 安装依赖
@@ -49,14 +59,19 @@ npm run build
 
 - 参考 [vue](https://github.com/vuejs/vue/blob/dev/.github/COMMIT_CONVENTION.md) 规范
 
-  - `feature` 增加新功能
-  - `fixbug` 修复问题/BUG
-  - `style` 不影响程序逻辑的代码修改(修改空白字符，格式缩进，补全缺失的分号等，没有改变代码逻辑)
-  - `perf` 优化/性能提升
-  - `refactor` 重构
-  - `revert` 撤销修改
-  - `docs` 文档/注释
-  - `chore` 依赖更新/脚手架配置修改等
+  - `feat` 新增功能
+  - `fix` 修复缺陷
+  - `docs` 文档变更
+  - `style` 代码格式
+  - `refactor` 代码重构
+  - `perf` 性能优化
+  - `test` 添加疏漏测试或已有测试改动
+  - `build` 构建流程、外部依赖变更 (如升级 npm 包、修改打包配置等)
+  - `ci` 修改 CI 配置、脚本
+  - `revert` 回滚 commit
+  - `chore` 对构建过程或辅助工具和库的更改 (不影响源文件)
+  - `wip` 正在开发中
+  - `types` 类型定义文件修改
 
 ## 维护者
 
