@@ -1,6 +1,7 @@
 <script lang="ts" setup>
   const { t } = useLocales();
 </script>
+
 <template>
   <main class="main">
     <slot />

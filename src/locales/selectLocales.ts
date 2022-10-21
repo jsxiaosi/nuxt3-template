@@ -1,4 +1,4 @@
-import { LocalesType } from '~/types/Locales';
+import type { LocalesType } from '~/types/Locales';
 
 export const lableLocales: LocalesType = {
   'en-US': {

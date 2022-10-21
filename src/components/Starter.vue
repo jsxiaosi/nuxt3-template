@@ -1,11 +1,12 @@
 <script setup lang="ts">
-  import { LinkType } from '../types/Link';
+  import type { LinkType } from '../types/Link';
 
   const linkList = ref<LinkType[]>([
     { id: 1, title: 'Pinia Store', url: 'pinia' },
     { id: 2, title: 'Vue Use', url: 'vueuse' },
   ]);
 </script>
+
 <template>
   <div>
     <ul>
@@ -15,6 +16,7 @@
     </ul>
   </div>
 </template>
+
 <style lang="scss">
   ul {
     list-style-type: none;

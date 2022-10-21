@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { LinkType } from '~/types/Link';
+  import type { LinkType } from '~/types/Link';
 
   defineProps({
     item: {
@@ -8,6 +8,7 @@
     },
   });
 </script>
+
 <template>
   <NuxtLink class="link" :to="`/${item.url}`">
     <div class="link-content">
@@ -15,6 +16,7 @@
     </div>
   </NuxtLink>
 </template>
+
 <style lang="scss">
   .link {
     display: block;

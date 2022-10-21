@@ -1,9 +1,10 @@
 <script setup lang="ts">
-  import { lableLocales } from '@/locales/selectLocales';
   import { useI18n } from 'vue-i18n';
+  import { lableLocales } from '@/locales/selectLocales';
   const showSelect = ref<boolean>(false);
   const { locale } = useI18n();
 </script>
+
 <template>
   <div class="locales">
     <div class="locales-text" @click="() => (showSelect = !showSelect)">
@@ -30,6 +31,7 @@
     </div>
   </div>
 </template>
+
 <style lang="scss">
   .locales {
     .locales-text {

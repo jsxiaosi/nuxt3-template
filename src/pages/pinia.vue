@@ -3,6 +3,7 @@
 
   const store = useCounterStore();
 </script>
+
 <template>
   <div class="pinia">
     <div>{{ store.num }}</div>
@@ -10,6 +11,7 @@
     <button class="global-text p-4" @click="store.setNum()"> +1 number click </button>
   </div>
 </template>
+
 <style lang="scss">
   .pinia {
     display: flex;

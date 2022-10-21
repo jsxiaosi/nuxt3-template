@@ -6,6 +6,7 @@
     initialValue: { x: 100, y: 100 },
   });
 </script>
+
 <template>
   <div>
     <div> Is Charging: {{ charging }} </div>
