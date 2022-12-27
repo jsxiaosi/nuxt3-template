@@ -11,7 +11,7 @@
   <div>
     <ul>
       <li v-for="item in linkList" :key="item.id">
-        <Link :item="item"></Link>
+        <ComLink :item="item"></ComLink>
       </li>
     </ul>
   </div>

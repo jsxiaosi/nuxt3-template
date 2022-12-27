@@ -9,6 +9,7 @@ export default defineNuxtConfig({
   css: ['@/assets/iconfont/iconfont.css', '@/assets/style/index.scss'],
   // TypeScript集成配置
   typescript: {
+    // shim: false,
     // 扩展tsconfig配置
     tsConfig: {
       compilerOptions: {
