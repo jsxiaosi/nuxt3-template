@@ -1,34 +1,47 @@
 <script setup lang="ts">
-  import { useI18n } from 'vue-i18n';
-  import { lableLocales } from '@/locales/selectLocales';
+  import type { LocaleObject } from '#i18n';
   const showSelect = ref<boolean>(false);
-  const { locale } = useI18n();
+  const config = useRuntimeConfig();
+
+  const { locale, locales, t, setLocale } = useI18n();
+  const switchLocalePath = useSwitchLocalePath();
+
+  const availableLocales: ComputedRef<LocaleObject[]> = computed(() => {
+    return (locales.value as LocaleObject[]).filter((i) => i.code !== locale.value);
+  });
+
+  const onLocalesChange = (value: string) => {
+    setLocale(value);
+  };
 </script>
 
 <template>
   <div class="locales">
-    <div class="locales-text" @click="() => (showSelect = !showSelect)">
-      <i class="icon iconfont icon-shuyi_fanyi-36" />
-      <span>{{ lableLocales[locale].name }}</span>
-    </div>
-    <div v-show="showSelect" class="lable">
-      <ul>
-        <li
-          v-for="item in lableLocales"
-          :key="item.iso"
-          :class="{ 'select-li': lableLocales[locale].iso === item.iso }"
-          @click="
-            () => {
-              locale = item.iso;
-            }
-          "
-        >
-          <span>
-            {{ item.name }}
-          </span>
-        </li>
-      </ul>
-    </div>
+    <template v-if="config.public.localesEnv === 'Browser'">
+      <div class="locales-text" @click="() => (showSelect = !showSelect)">
+        <i class="icon iconfont icon-shuyi_fanyi-36" />
+        <span>{{ t('name') }}</span>
+      </div>
+
+      <div v-show="showSelect" class="lable">
+        <ul>
+          <li v-for="item in (locales as LocaleObject[])" :key="item.code">
+            <span @click="onLocalesChange(item.code)">
+              {{ item.name }}
+            </span>
+          </li>
+        </ul>
+      </div>
+    </template>
+    <template v-else>
+      <NuxtLink
+        v-for="localeItem in availableLocales"
+        :key="localeItem.code"
+        :to="switchLocalePath(localeItem.code)"
+      >
+        {{ localeItem.name }}
+      </NuxtLink>
+    </template>
   </div>
 </template>
 
@@ -41,21 +54,26 @@
       position: relative;
       line-height: 26px;
     }
+
     .icon {
       margin-right: 5px;
     }
+
     .lable {
       border: 1px solid var(--light-color);
       padding: 6px;
       min-width: 120px;
       background-color: var(--bg-color);
       line-height: 26px;
+
       .select-li {
         color: var(--color);
       }
+
       li {
         cursor: pointer;
       }
+
       li:hover {
         color: var(--color);
       }

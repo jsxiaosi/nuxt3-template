@@ -5,12 +5,13 @@ module.exports = {
     es6: true,
     node: true,
   },
-  extends: [
-    '@jsxiaosi/eslint-config-vue',
-    'plugin:prettier/recommended',
-    // 'plugin:nuxt/recommended',
-  ],
+  extends: ['@jsxiaosi/eslint-config-vue', 'plugin:prettier/recommended'],
   rules: {
-    'prettier/prettier': 'error',
+    'prettier/prettier': [
+      'error',
+      {
+        usePrettierrc: true,
+      },
+    ],
   },
 };

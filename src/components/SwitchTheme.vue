@@ -1,12 +1,13 @@
 <script setup lang="ts">
-  const color = useColorMode();
+  import { useColorMode } from '@vueuse/core';
+  const color = useColorMode({ disableTransition: false });
   function toggleDark() {
     color.value = color.value === 'dark' ? 'light' : 'dark';
   }
 </script>
 
 <template>
-  <div class="theme" :class="{ 'theme-dark': color.value === 'dark' }" @click="toggleDark">
+  <div class="theme" :class="{ 'theme-dark': color === 'dark' }" @click="toggleDark">
     <div class="theme-inner" />
     <i class="iconfont icon-sun" />
     <i class="iconfont icon-moon" />

@@ -7,10 +7,12 @@
       default: () => {},
     },
   });
+
+  const localePath = useLocalePath();
 </script>
 
 <template>
-  <NuxtLink class="link" :to="`/${item.url}`">
+  <NuxtLink class="link" :to="localePath(`/${item.url}`)">
     <div class="link-content">
       <span>{{ item.title }}</span>
     </div>

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-  const { t } = useLocales();
+  // const { t } = useLocales();
 </script>
 
 <template>
@@ -10,7 +10,7 @@
         <Locales></Locales>
         <SwitchTheme></SwitchTheme>
       </div>
-      <div class="describe">layout：{{ t('layout') }}</div>
+      <!-- <div class="describe">layout：{{ t('layout') }}</div> -->
     </div>
   </main>
 </template>
