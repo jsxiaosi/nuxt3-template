@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "bradlc.vscode-tailwindcss",
+    "vue.vscode-typescript-vue-plugin",
+    "vue.volar",
+    "syler.sass-indented",
+    "zixuanchen.vitest-explorer"
+  ]
+}

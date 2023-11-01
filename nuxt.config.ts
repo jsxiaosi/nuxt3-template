@@ -25,7 +25,18 @@ export default defineNuxtConfig({
   srcDir: 'src',
   modules: ['@nuxtjs/color-mode', '@nuxtjs/i18n', '@pinia/nuxt', '@vueuse/nuxt'],
   // 添加全局样式
-  css: ['@/assets/iconfont/iconfont.css', '@/assets/style/index.scss'],
+  css: [
+    '@/assets/iconfont/iconfont.css',
+    '@/assets/style/index.scss',
+    '@/assets/style/tailwind.css',
+  ],
+  // postcss
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
   // env配置
   runtimeConfig: {
     secret: process.env.SECRET,
