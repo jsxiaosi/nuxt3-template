@@ -1,3 +1,4 @@
+import process from 'process';
 import { defineNuxtConfig } from 'nuxt/config';
 import { locales } from './locales';
 
@@ -28,11 +29,7 @@ export default defineNuxtConfig({
   srcDir: 'src',
   modules: ['@nuxtjs/color-mode', '@nuxtjs/i18n', '@pinia/nuxt', '@vueuse/nuxt', '@nuxt/image'],
   // 添加全局样式
-  css: [
-    '@/assets/iconfont/iconfont.css',
-    '@/assets/style/index.scss',
-    '@/assets/style/tailwind.css',
-  ],
+  css: ['@/assets/iconfont/iconfont.css', '@/assets/style/index.scss', '@/assets/style/tailwind.css'],
   // nuxtImage
   image: {
     dir: 'assets/images',
@@ -67,7 +64,7 @@ export default defineNuxtConfig({
     differentDomains: false,
     defaultLocale: 'zh-CN',
     ...browserLocale,
-    locales: locales,
+    locales,
   },
 
   // 主题切换配置

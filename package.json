@@ -1,5 +1,6 @@
 {
   "private": true,
+  "license": "MIT",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -7,7 +8,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "type:check": "vue-tsc --noEmit --skipLibCheck",
-    "lint:eslint": "eslint \"src/**/*.{vue,ts,js,tsx,jsx}\" --fix",
+    "lint:eslint": "eslint . --fix",
     "lint:prettier": "prettier --write --loglevel warn \"src/**/*.{js,json,css,scss,vue,ts,tsx,jsx,html,md}\"",
     "lint:stylelint": "stylelint --fix \"src/**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/",
     "lint:staged": "lint-staged",
@@ -20,9 +21,8 @@
     "vue-router": "^4.2.5"
   },
   "devDependencies": {
-    "@jsxiaosi/commitlint-config": "^0.0.21",
-    "@jsxiaosi/eslint-config-prettier": "^0.0.21",
-    "@jsxiaosi/eslint-config-vue": "^0.0.21",
+    "@jsxiaosi/commitlint-config": "^1.0.2",
+    "@jsxiaosi/eslint-config": "^1.0.3",
     "@nuxt/devtools": "latest",
     "@nuxt/image": "^1.1.0",
     "@nuxtjs/color-mode": "^3.3.2",
@@ -31,15 +31,16 @@
     "@vueuse/core": "^10.7.1",
     "@vueuse/nuxt": "^10.7.1",
     "autoprefixer": "^10.4.16",
-    "czg": "^1.8.0",
-    "eslint": "^8.56.0",
+    "czg": "^1.9.4",
+    "eslint": "^9.9.1",
     "eslint-plugin-nuxt": "^4.0.0",
+    "eslint-plugin-prettier": "^5.2.1",
     "husky": "^8.0.3",
     "lint-staged": "^15.2.0",
     "nuxt": "3.9.1",
     "postcss": "^8.4.33",
     "postcss-html": "^1.5.0",
-    "prettier": "^3.1.1",
+    "prettier": "^3.3.3",
     "sass": "^1.69.7",
     "stylelint": "^16.1.0",
     "stylelint-config-property-sort-order-smacss": "^10.0.0",
@@ -54,7 +55,6 @@
     "typescript": "^5.3.3",
     "vue-tsc": "^1.8.27"
   },
-  "license": "MIT",
   "config": {
     "commitizen": {
       "path": "node_modules/cz-git"

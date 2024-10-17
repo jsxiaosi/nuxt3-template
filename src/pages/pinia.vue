@@ -1,18 +1,20 @@
 <script setup lang="ts">
-  import { useCounterStore } from '../store/counter';
-  import userLogo from '@/assets/images/user_logo.png';
+import userLogo from "@/assets/images/user_logo.png";
+import { useCounterStore } from "../store/counter";
 
-  console.log(userLogo);
+console.log(userLogo);
 
-  const store = useCounterStore();
+const store = useCounterStore();
 </script>
 
 <template>
   <div class="pinia">
     <div>{{ store.num }}</div>
     <input v-model="store.num" class="text-black" type="number" />
-    <button class="global-text p-4" @click="store.setNum()"> +1 number click </button>
-    <div class="h-[500px]"></div>
+    <button class="global-text p-4" @click="store.setNum()">
+      +1 number click
+    </button>
+    <div class="h-[500px]" />
     <NuxtImg
       width="400"
       height="600"
@@ -25,21 +27,21 @@
 </template>
 
 <style lang="scss">
-  .pinia {
-    display: flex;
-    flex-direction: column;
+.pinia {
+  display: flex;
+  flex-direction: column;
 
-    input {
-      margin-top: $margin2;
-      padding: 6px;
-      border: 1px solid var(--light-color);
-    }
-
-    button {
-      margin-top: $margin2;
-      padding: 6px;
-      border: 1px solid var(--light-color);
-      cursor: pointer;
-    }
+  input {
+    margin-top: $margin2;
+    padding: 6px;
+    border: 1px solid var(--light-color);
   }
+
+  button {
+    margin-top: $margin2;
+    padding: 6px;
+    border: 1px solid var(--light-color);
+    cursor: pointer;
+  }
+}
 </style>

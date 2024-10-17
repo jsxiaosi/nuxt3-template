@@ -2,7 +2,7 @@
 
 <template>
   <div>
-    <Starter> </Starter>
+    <Starter />
     <NuxtImg
       width="400"
       height="600"
