@@ -21,15 +21,22 @@ export default defineNuxtConfig({
   devtools: {
     enabled: true, // or false to disable
   },
+  experimental: {
+    viewTransition: true,
+  },
   // 更换源目录
   srcDir: 'src',
-  modules: ['@nuxtjs/color-mode', '@nuxtjs/i18n', '@pinia/nuxt', '@vueuse/nuxt'],
+  modules: ['@nuxtjs/color-mode', '@nuxtjs/i18n', '@pinia/nuxt', '@vueuse/nuxt', '@nuxt/image'],
   // 添加全局样式
   css: [
     '@/assets/iconfont/iconfont.css',
     '@/assets/style/index.scss',
     '@/assets/style/tailwind.css',
   ],
+  // nuxtImage
+  image: {
+    dir: 'assets/images',
+  },
   // postcss
   postcss: {
     plugins: {

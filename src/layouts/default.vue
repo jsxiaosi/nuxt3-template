@@ -1,6 +1,4 @@
-<script lang="ts" setup>
-  // const { t } = useLocales();
-</script>
+<script lang="ts" setup></script>
 
 <template>
   <main class="main">
@@ -10,7 +8,6 @@
         <Locales></Locales>
         <SwitchTheme></SwitchTheme>
       </div>
-      <!-- <div class="describe">layout：{{ t('layout') }}</div> -->
     </div>
   </main>
 </template>
@@ -18,13 +15,15 @@
 <style lang="scss">
   .layout {
     margin-top: $margin;
+
     .config {
       display: flex;
       justify-content: space-between;
     }
+
     .describe {
-      margin-top: $margin2;
       width: 100%;
+      margin-top: $margin2;
       text-align: center;
     }
   }

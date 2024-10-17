@@ -1,8 +1,13 @@
 <script setup lang="ts">
   import { useColorMode } from '@vueuse/core';
-  const color = useColorMode({ disableTransition: false });
+  const colorMode = useColorMode({ disableTransition: false });
+  const color = ref<'auto' | 'light' | 'dark'>('auto');
+  watchEffect(() => {
+    color.value = colorMode.value;
+  });
   function toggleDark() {
     color.value = color.value === 'dark' ? 'light' : 'dark';
+    colorMode.value = color.value;
   }
 </script>
 
@@ -16,29 +21,33 @@
 
 <style lang="scss" scoped>
   .theme {
+    display: flex;
     position: relative;
+    align-items: center;
+    justify-content: space-between;
     width: 50px;
     height: 26px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: 151515;
-    border: 1px solid var(--light-color);
     padding: 0 6px;
-    font-size: 1em;
+    border: 1px solid var(--light-color);
     border-radius: 30px;
+    background-color: 151515;
     color: #f4ea2a;
+    font-size: 1em;
+
     .theme-inner {
       position: absolute;
       z-index: 1;
       width: 18px;
       height: 18px;
-      background-color: var(--light-color);
+      transition:
+        transform 0.5s,
+        background-color 0.5s;
       border-radius: 50%;
-      transition: transform 0.5s, background-color 0.5s;
+      background-color: var(--light-color);
       will-change: transform;
     }
   }
+
   .theme-dark {
     .theme-inner {
       transform: translateX(calc(100%));
